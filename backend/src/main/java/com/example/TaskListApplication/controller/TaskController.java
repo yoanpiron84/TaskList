@@ -1,7 +1,9 @@
 package com.example.TaskListApplication.controller;
 
 import com.example.TaskListApplication.TaskListApplication;
+import com.example.TaskListApplication.model.ArchivedTask;
 import com.example.TaskListApplication.model.Task;
+import com.example.TaskListApplication.repository.ArchivedTaskRepository;
 import com.example.TaskListApplication.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +19,8 @@ public class TaskController {
 
     @Autowired
     private TaskRepository taskRepository;
+    @Autowired
+    private ArchivedTaskRepository archivedTaskRepository;
 
     // Récupération de toutes les tâches
     @GetMapping
@@ -29,6 +33,15 @@ public class TaskController {
 
         // On retourne la liste des tâches
         return tasks;
+    }
+
+    // Récupération de toutes les tâches archivées
+    @GetMapping("/archived")
+    public List<ArchivedTask> getAllArchivedTasks() {
+        List<ArchivedTask> archivedTasks = archivedTaskRepository.findAll();
+
+        // On retourne la liste des tâches
+        return archivedTasks;
     }
 
     // Création d'une tâche
@@ -60,7 +73,7 @@ public class TaskController {
 
         checkStatusTask(existingTask);
 
-        // Retourner la tâche mise à jour
+        // On retourne la tâche mise à jour
         return existingTask;
     }
 
@@ -74,7 +87,7 @@ public class TaskController {
     // Fonction de vérification de statut d'une tâche
     private void checkStatusTask(Task task) {
 
-        // Lancer le job batch seulement si la tâche est marquée comme "Terminé"
+        // On lance le job batch seulement si la tâche est marquée comme "Terminé"
         if ("Terminé".equals(task.getStatus())) {
             taskListApplication.runBatchJob();
 

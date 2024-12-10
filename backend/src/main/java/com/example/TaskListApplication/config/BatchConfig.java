@@ -19,6 +19,8 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 import javax.sql.DataSource;
+import java.sql.Date;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Configuration
@@ -54,7 +56,7 @@ public class BatchConfig {
             archivedTask.setTitle(task.getTitle());
             archivedTask.setDescription(task.getDescription());
             archivedTask.setStatus(task.getStatus());
-            archivedTask.setArchivedDate(LocalDateTime.now());
+            archivedTask.setArchivedDate(Date.valueOf(LocalDate.now()));
             return archivedTask;
         };
     }

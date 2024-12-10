@@ -1,0 +1,156 @@
+/* Conteneur principal du composant */
+.container {
+  background-color: transparent;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* Champs de formulaire et boutons */
+.container input,
+.container select {
+  background-color: #fff !important;
+  border: 1px solid #ccc;
+  z-index: 0;
+  position: relative;
+}
+
+.is-invalid {
+  border-color: red !important;
+}
+
+
+
+/* Modal Overlay (fond du modal) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Contenu du modal */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style de la card */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* En-tête du modal */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.modal-header h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Corps du modal */
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Formulaire et champs de saisie */
+.modal-body label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.modal-body input,
+.modal-body textarea,
+.modal-body select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.modal-body textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+/* Pied du modal */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Boutons */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button[type="button"] {
+  background-color: #ccc;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.custom-yellow-bg {
+  background-color: #ead364;
+}
+
+.custom-gray-bg {
+  background-color: #868686;
+}
+
+.custom-green-bg {
+  background-color: #64ea66;
+}
+
+.list-group-item {
+  margin-bottom: 10px;
+}
+

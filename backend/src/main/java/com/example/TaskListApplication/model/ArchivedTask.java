@@ -5,7 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 public class ArchivedTask {
@@ -15,7 +15,7 @@ public class ArchivedTask {
     private String title;
     private String description;
     private String status;
-    private LocalDateTime archivedDate;
+    private Date archivedDate;
 
     // Getters and setters
 
@@ -51,11 +51,11 @@ public class ArchivedTask {
         this.status = status;
     }
 
-    public LocalDateTime getArchivedDate() {
+    public Date getArchivedDate() {
         return archivedDate;
     }
 
-    public void setArchivedDate(LocalDateTime archivedDate) {
+    public void setArchivedDate(Date archivedDate) {
         this.archivedDate = archivedDate;
     }
 }
