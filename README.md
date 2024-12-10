@@ -67,7 +67,8 @@ http://localhost:8080/tasks/1 pour supprimer la tâche 1.
 Pour la partie frontend, il faut d'abord ouvrir un terminal au niveau du répertoire frontend/tasklist-frontend et de taper:
 taper la commande ng serve pour lancer l'application Angular en mode développeur (dans ce cas il faudra accéder à l'application web par l'adresse http://localhost:4200
 
-Si vous souhaitez accéder à l'application en mode distribué, il faut lancer le script server.js situé dans le dossier server avec la commande node server.js (adresse: http://localhost:8081 )
+Si vous souhaitez accéder à l'application en mode distribué, il faut d'abord taper la commande depuis frontend/tasklist-frontend: ng build, puis lancer le script server.js situé dans le dossier server avec la commande node server.js (adresse: http://localhost:8081 )
+ATTENTION: si il manque des modules lors du lancement de node server.js, il suffit d'exécuter la commande: npm install <module>
 
 ###### AJOUT DE TACHE #####
 
