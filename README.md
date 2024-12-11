@@ -118,8 +118,26 @@ J'ai choisi de créer un composant "task" qui sera imbriqué dans le composant p
 et de communiquer avec l'API REST par l'intermédiaire d'un service "task-service".
 
 
+######################################
+###### DIFFICULTES RENCONTREES #######
+######################################
 
+###### SPRING BATCH ET SPRING BOOT #####
 
+Développer une application Spring Boot et l'utilisation de Spring Batch était tout nouveau pour moi j'ai donc du me documenter sur
+différents forums, afin de comprendre la logique de fonctionnement.
 
+Ce qui m'a demandé le plus de temps c'est l'utilisation de Spring Batch pour le traitement par lot et l'archivage des tâches dans
+une autre table.
+
+Grâce à ce mini projet, j'ai pu mieux appréhender Spring Batch même si il reste quelques points possible d'amélioration comme par exemple l'optimisation du code.
+
+###### OPTIMISATION #####
+
+En ce qui concerne l'optimisation du code, surtout côté angular, il y a beaucoup de variables assez redondantes ce qui aurait pu être
+évité.
+
+Pour cela il aurait été possible d'utiliser un NgModel pour faire le lien entre un input et sa variable dans le composant.ts (ce que j'ai essayé d'intégrer
+mais j'ai eu pas mal d'erreurs avec NgModel notamment le fait qu'il ne reconnaissait pas les variables du composant.ts).
 
 
